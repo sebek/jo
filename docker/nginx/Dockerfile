@@ -4,9 +4,9 @@ WORKDIR /var/www/app
 
 COPY src .
 
-COPY nginx.conf /opt/bitnami/nginx/conf/nginx.conf
-COPY sites /opt/bitnami/nginx/conf/sites
-COPY conf.d /opt/bitnami/nginx/conf/conf.d
+COPY /docker/nginx/nginx.conf /opt/bitnami/nginx/conf/nginx.conf
+COPY /docker/nginx/sites /opt/bitnami/nginx/conf/sites
+COPY /docker/nginx/conf.d /opt/bitnami/nginx/conf/conf.d
 
 CMD ["nginx", "-g", "daemon off;"]
 
