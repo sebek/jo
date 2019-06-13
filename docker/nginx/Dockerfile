@@ -1,4 +1,4 @@
-FROM bitnami/ngx:1.16.0-ol-7-r0
+FROM bitnami/nginx:1.16.0-ol-7-r0
 
 WORKDIR /var/www/app
 
