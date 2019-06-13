@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  php-fpm:
+    build:
+      context: .
+      dockerfile: docker/php-fpm/Dockerfile
+    working_dir: /var/www/app/public
+
+  web:
+    build:
+      context: .
+      dockerfile: docker/nginx/Dockerfile
+    working_dir: /var/www/app/public
+
+    ports:
+      - "8080:8080"
+      - "4433:4433"
